@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC College</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fa;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:#0d47a1;
+color:white;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffd54f;
+}
+
+.menu{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+background:#ff9800;
+color:white;
+padding:14px 30px;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+}
+
+section{
+padding:90px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#0d47a1;
+font-size:36px;
+}
+
+.about p{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.contact{
+max-width:700px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+background:#0d47a1;
+color:white;
+padding:14px 25px;
+border:none;
+cursor:pointer;
+border-radius:6px;
+font-size:18px;
+}
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#0d47a1;
+flex-direction:column;
+text-align:center;
+}
+
+nav ul.active{
+display:flex;
+}
+
+nav ul li{
+margin:15px 0;
+}
+
+.menu{
+display:block;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">ABC College</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<ul id="navLinks">
+<li><a href="#about">About</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#faculty">Faculty</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#admission">Admission</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Welcome to ABC College</h1>
+
+<p>Empowering Students Through Excellence in Education</p>
+
+<a href="#admission" class="btn">Apply Now</a>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2>About Us</h2>
+
+<p>
+ABC College is committed to academic excellence, innovation,
+research, and holistic student development. We prepare students
+to become future leaders with modern education and practical skills.
+</p>
+
+</section>
+
+<section id="courses">
+
+<h2>Our Courses</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Bachelor of Computer Applications</h3>
+<p>Learn programming, AI, web development, networking and software engineering.</p>
+</div>
+
+<div class="card">
+<h3>Bachelor of Business Administration</h3>
+<p>Build leadership, finance, entrepreneurship and management skills.</p>
+</div>
+
+<div class="card">
+<h3>Bachelor of Science</h3>
+<p>Modern science education with advanced laboratory facilities.</p>
+</div>
+
+<div class="card">
+<h3>Bachelor of Commerce</h3>
+<p>Accounting, taxation, economics and business analytics.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="faculty">
+
+<h2>Our Faculty</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Dr. Sarah Johnson</h3>
+<p>Professor of Computer Science</p>
+</div>
+
+<div class="card">
+<h3>Prof. David Smith</h3>
+<p>Head of Business Department</p>
+</div>
+
+<div class="card">
+<h3>Dr. Emily Wilson</h3>
+<p>Professor of Physics</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Campus Gallery</h2>
+
+<div class="grid gallery">
+
+<img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+</section>
+
+<section id="admission">
+
+<h2>Admissions</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Eligibility</h3>
+<p>Minimum 50% marks in qualifying examination.</p>
+</div>
+
+<div class="card">
+<h3>Application Process</h3>
+<p>Complete the online application and upload required documents.</p>
+</div>
+
+<div class="card">
+<h3>Scholarships</h3>
+<p>Merit-based scholarships are available for outstanding students.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact">
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 ABC College. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener("click",function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
+document.getElementById("navLinks").classList.remove("active");
+});
+});
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Thank you! Your message has been submitted.");
+this.reset();
+});
+
+</script>
+
+</body>
+</html>
